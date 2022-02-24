@@ -14,6 +14,7 @@ Console.WriteLine("2) Paper");
 Console.WriteLine("3) Scissors");
 
 int PlayerChoice = int.Parse (Console.ReadLine()) - 1;
+int ComputerChoice =new Random().Next(0, 3);
 
 List<string> Throws = new List<string>() {
     // thanks to wynand1004 for the art!;
@@ -37,4 +38,8 @@ List<string> Throws = new List<string>() {
 ---.__(___)"
 };
 
-Console.WriteLine($"{Throws[PlayerChoice]}");
+Console.WriteLine($@"{Throws[PlayerChoice]}
+
+vs
+
+{Throws[ComputerChoice]}");

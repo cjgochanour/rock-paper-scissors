@@ -14,8 +14,10 @@ Console.WriteLine("2) Paper");
 Console.WriteLine("3) Scissors");
 
 int PlayerChoice = int.Parse (Console.ReadLine()) - 1;
+int ComputerChoice = 
 
 List<string> Throws = new List<string>() {
+    // thanks to wynand1004 for the art!
     @"    _______
 ---'   ____)
       (_____)

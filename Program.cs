@@ -3,9 +3,9 @@
 int PlayerScore = 0;
 int ComputerScore = 0;
 
-Console.WriteLine("-----------------------------");
-Console.WriteLine($"| Player: {PlayerScore}  |  Computer: {ComputerScore} |");
-Console.WriteLine("-----------------------------");
+Console.WriteLine(@$"-----------------------------
+| Player: {PlayerScore}  |  Computer: {ComputerScore} |
+-----------------------------");
 
 Console.WriteLine("What would you like to throw?");
 Console.WriteLine("1) Rock");

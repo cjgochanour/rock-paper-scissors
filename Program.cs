@@ -30,7 +30,7 @@ main();
 
 void main()
 {
-    while (PlayerScore != 3 || ComputerScore != 3)
+    while (PlayerScore != 3 & ComputerScore != 3)
     {
         Console.WriteLine(@$"-----------------------------
 | Player: {PlayerScore}  |  Computer: {ComputerScore} |
@@ -47,13 +47,60 @@ void main()
 vs
 
 {Throws[ComputerChoice]}");
+
+        if (PlayerChoice == ComputerChoice)
+        {
+            Console.WriteLine();
+        }
+        else
+        {
+            switch (PlayerChoice + 1)
+            {
+                case 1:
+                    switch (ComputerChoice + 1)
+                    {
+                        case 2:
+                            ComputerScore += 1;
+                            break;
+                        case 3:
+                            PlayerScore += 1;
+                            break;
+                    }
+                    break;
+                case 2:
+                    switch (ComputerChoice + 1)
+                    {
+                        case 1:
+                            PlayerScore += 1;
+                            break;
+                        case 3:
+                            ComputerScore += 1;
+                            break;
+                    }
+                    break;
+                case 3:
+                    switch (ComputerChoice + 1)
+                    {
+                        case 1:
+                            ComputerScore += 1;
+                            break;
+                        case 2:
+                            PlayerScore += 1;
+                            break;
+                    }
+                    break;
+            }
+        }
     }
+
     if (PlayerScore == 3)
     {
+        Console.WriteLine();
         Console.WriteLine("YOU WIN!");
     }
     else
     {
+        Console.WriteLine();
         Console.WriteLine("YOU LOSE!");
     }
 };
